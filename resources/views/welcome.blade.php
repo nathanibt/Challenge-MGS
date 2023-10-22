@@ -1,100 +1,72 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fr">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MGS - Nathan Imbert </title>
+    <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
+</head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
+<body> 
+    
+@foreach ($donnees as $donnee)
+    <div class="header">
+        <div class="logo">
+            <img src="{{ $donnee->logo }}" alt="Logo de l'hôtel">
         </div>
-    </body>
+
+        <nav>
+            <ul>
+                <li class="menu-item"><a href="#">Accueil</a></li>
+                <li class="menu-item"><a href="#">Locations</a></li>
+                <li class="menu-item"><a href="#">Activités</a></li>
+                <li class="menu-item"><a href="#">Galerie</a></li>
+                <li class="menu-item"><a href="#">Tourisme</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div id="menu-container"></div>
+    </div>
+    <div class="promotion">
+
+        <h3>-10% SUR NOS CHAMBRES</h3>
+        <p>{{ $donnee->text }}</p>
+    </div>
+
+
+    <div class="location">
+        <div class="trait"></div>
+        <h3>Location et Spa a Bandol</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit perspiciatis, aperiam amet nisi dolores
+            provident neque distinctio nihil aspernatur reiciendis, nam labore aut, ad molestias iure quia facere sunt
+            exercitationem!
+            Ipsam, ipsum. Quo debitis suscipit doloribus atque delectus cumque quam temporibus excepturi hic corrupti
+            quos accusantium qui officiis esse blanditiis molestias nobis soluta repellendus facilis, sint non
+            accusamus, itaque sunt.</p>
+    </div>
+
+    <div class="reservation-box">
+        <div class="icon">
+            <img src="assets/img/calendrier.png" alt="Calendrier">
+        </div>
+        <div class="text">RESERVATION</div>
+    </div>
+
+    <div class="info-box">
+        <p>Meilleur tarif garanti</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium architecto, at quae porro corporis
+            cumque non voluptate dolore numquam, cupiditate, consequuntur harum sapiente minima impedit debitis iure!
+            Quos, dignissimos soluta.</p>
+        <div class="bottom">
+            <p>Vérifier les disponibilités</p>
+        </div>
+    </div>
+
+    @endforeach
+
+    <script src="assets/js/app.js"></script>
+</body>
+
 </html>

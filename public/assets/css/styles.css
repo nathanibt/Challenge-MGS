@@ -1,0 +1,165 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+
+}
+
+html {
+    height: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 15em; /* 1/4  de l'écran */
+    background-color: #e6e2e1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.85;
+    box-shadow: 1px 2px 4px #000000; /* Ombre légère */
+}
+
+.logo {
+    margin-bottom: 120px; 
+}
+.logo img {
+    width: 100%; /* Ajustez la largeur de l'image selon vos besoins */
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #000000; /* Ajoute une bordure en bas de chaque élément */
+    position: relative;
+    padding-bottom: 30px; /* Espace entre le texte et la bordure */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ea1010;
+}
+.location {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff; /* Rouge */
+    color: #000000;
+    padding: 10px;
+    text-align: left; /* Aligne le texte à gauche */
+    width: 700px;
+    opacity: 0.85;
+}
+
+.promotion {
+    position: fixed;
+    bottom: 5cm; /* Espacement de 5 cm du bas */
+    right: 0px; /* Ajustez la distance de la droite */
+    background-color: #D6183C;
+    color: #ffffff;
+    padding: 10px;
+    width: 700px;
+    margin-bottom: 30px;
+    height: 100px;
+}
+
+.promotion h3 {
+    font-size: 24px; /* Ajustez la taille de la police selon vos préférences */
+    font-weight: bold; /* Met le texte en gras */
+}
+
+.promotion p {
+    font-size: 14px; /* Ajustez la taille de la police selon vos préférences */
+}
+
+.trait {
+    width: 30px;
+    height: 2px;
+    background-color: #FF0000; /* Rouge */
+    margin-bottom: 10px;
+}
+
+
+.li {
+    font-weight: bold;
+}
+
+#menu-container {
+    position: absolute;
+    top: 430px;
+    left: 300px;
+    width: 200px;
+    background-color: #fffefe;
+    border: 1px solid #ccc;
+    display: none;
+}
+
+
+
+
+.reservation-box {
+    position: absolute;
+    background-color: #D6183C; /* Rouge */
+    color: #fff;
+    display: flex;
+    top: 0;
+    right: 30px;
+    align-items: center;
+    width: 400px;
+    padding: 10px;
+}
+
+.reservation-box .icon img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.reservation-box .text {
+    color: #ffffff;
+}
+
+.info-box {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    width: 400px;
+    height: 230px;
+    opacity: 0.85;
+}
+
+.info-box .bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FF0000; /* Rouge */
+    padding: 10px;
+    color: #fff;
+    width: max-content;
+    height: 50px;
+    width: 200px;
+}
+
